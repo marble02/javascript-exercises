@@ -2,8 +2,9 @@ const findTheOldest = function(obj) {
 
     function getAge(person) {
         let age;
+        let currentDate = new Date();
         if (person.yearOfDeath == undefined) {
-            age = 2022 - person.yearOfBirth;
+            age = currentDate.getFullYear() - person.yearOfBirth;
         } else {
             age = person.yearOfDeath - person.yearOfBirth
         }
